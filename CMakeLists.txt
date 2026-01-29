@@ -11,6 +11,8 @@ else()
     add_compile_options(-Wall -Wextra -O3 -march=native)
 endif()
 
+find_package(OpenMP REQUIRED)
+
 # 设置输出目录
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -25,6 +27,7 @@ file(GLOB_RECURSE SOURCES "src/core/*.cpp")
 
 add_library(core ${SOURCES})
 target_include_directories(core PUBLIC src)
+target_link_libraries(core PUBLIC OpenMP::OpenMP_CXX)
 
 # ---- Tests ----
 enable_testing()
