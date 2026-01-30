@@ -40,3 +40,12 @@ target_link_libraries(test_basic PRIVATE core)
 
 add_executable(test_benchmark tests/test_benchmark.cpp)
 target_link_libraries(test_benchmark PRIVATE core)
+
+add_executable(test_thread_pool tests/test_thread_pool.cpp)
+target_link_libraries(test_thread_pool PRIVATE core)
+
+add_executable(test_wal tests/test_wal.cpp)
+target_link_libraries(test_thread_pool PRIVATE core)
+
+add_executable(test_rwlock tests/test_rwlock.cpp)
+target_link_libraries(test_rwlock PRIVATE core)
