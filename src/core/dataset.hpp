@@ -2,8 +2,7 @@
  * @file    dataset.hpp
  * @brief   向量数据集管理类实现
  * @details 提供高维向量的存储、添加和随机访问功能
- * @author  yourname
- * @date    2025-01-29
+ * @author  Tyooughtul
  */
 
 #pragma once

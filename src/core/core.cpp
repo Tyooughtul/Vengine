@@ -2,8 +2,7 @@
  * @file    core.cpp
  * @brief   Mini-Milvus核心模块入口
  * @details 提供版本信息等基础功能
- * @author  yourname
- * @date    2025-01-29
+ * @author  Tyooughtul
  */
 
 #include <iostream>
