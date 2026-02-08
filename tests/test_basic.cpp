@@ -2,8 +2,8 @@
 #include <vector>
 #include <cassert>
 #include <cmath>
-#include "../src/core/dataset.hpp"
-#include "../src/core/metrics.hpp"
+#include "../src/core/dataset/dataset.hpp"
+#include "../src/core/metrics/metrics.hpp"
 
 bool is_close(float a,float b,float epsilon = 1e-5) {
     return std::abs(a-b) < epsilon;

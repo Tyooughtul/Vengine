@@ -4,9 +4,9 @@
 #include <random>
 #include <iomanip>
 #include <set>
-#include "../src/core/dataset.hpp"
-#include "../src/core/metrics.hpp"
-#include "../src/core/ivf_index.hpp"
+#include "../src/core/dataset/dataset.hpp"
+#include "../src/core/metrics/metrics.hpp"
+#include "../src/core/index/ivf_index.hpp"
 
 // --- 将原来的 generate_random_vector 替换/补充为 generate_clustered_data ---
 

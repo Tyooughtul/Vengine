@@ -7,7 +7,7 @@
 #include <vector>
 #include <chrono>
 #include <future>
-#include "../src/core/thread_pool.hpp"
+#include "../src/core/utils/thread_pool.hpp"
 
 void print_hello(int id) {
     std::cout << "Thread " << id << " says hello!" << std::endl;

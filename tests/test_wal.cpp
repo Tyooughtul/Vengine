@@ -4,7 +4,7 @@
  */
 
 #include <iostream>
-#include "../src/core/wal.hpp"
+#include "../src/core/utils/wal.hpp"
 
 int main() {
     std::cout << "=== WAL Test ===" << std::endl;

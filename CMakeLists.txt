@@ -19,11 +19,12 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # ---- Core Library ----
-# 包含 src 目录下的头文件
+# 包含 src 目录和第三方库的头文件
 include_directories(src)
+include_directories(third_party)
 
 # 收集源文件
-file(GLOB_RECURSE SOURCES "src/core/*.cpp")
+file(GLOB_RECURSE SOURCES "src/core/**/*.cpp")
 
 add_library(core ${SOURCES})
 target_include_directories(core PUBLIC src)
@@ -45,7 +46,7 @@ add_executable(test_thread_pool tests/test_thread_pool.cpp)
 target_link_libraries(test_thread_pool PRIVATE core)
 
 add_executable(test_wal tests/test_wal.cpp)
-target_link_libraries(test_thread_pool PRIVATE core)
+target_link_libraries(test_wal PRIVATE core)
 
 add_executable(test_rwlock tests/test_rwlock.cpp)
 target_link_libraries(test_rwlock PRIVATE core)
